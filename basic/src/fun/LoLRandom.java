@@ -1,27 +1,33 @@
 package fun;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class LoLRandom {
 
 	public static void main(String[] args) {
 
-		Map lolMap = new HashMap();
+		List<String> lolMap = new ArrayList<String>();
 
-		lolMap.put(1, "露露");
-		lolMap.put(2, "雷格爾");
-		lolMap.put(3, "冰鳥");
-		lolMap.put(4, "雷文");
-		lolMap.put(5, "李星");
+		lolMap.add("LuLu");
+		lolMap.add("Van");
+		lolMap.add("Ivly");
+		lolMap.add("LeeShin");
+		lolMap.add("Caterin");
 
-		int randNum = (int) (Math.random() * 6) + 1;
-
-		if (lolMap.get(randNum) != null) {
-			System.out.println(lolMap.get(randNum));
-			lolMap.remove(randNum);
-		}else {
-			System.out.println("重骰");
+		Scanner sc = new Scanner(System.in);
+		
+		while(!sc.next().equals("0")) {
+			int randNum = (int) (Math.random() * lolMap.size());
+			if (lolMap.get(randNum) != null) {
+				System.out.println(lolMap.get(randNum));
+				lolMap.remove(randNum);
+			}
+			
+			if(lolMap.size() == 0) {
+				break;
+			}
 		}
 
 	}

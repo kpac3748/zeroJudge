@@ -12,7 +12,7 @@ public class StringDefaultValueTest {
 		
 //		String accboxSendMsg ="RSKKasdas";	
 //		String[] accboxSendMsgArray = accboxSendMsg.split("-");
-//		String msgCD = accboxSendMsgArray[0];	//訊息代號
+//		String msgCD = accboxSendMsgArray[0];	//閮隞����
 //		
 //		String num = "81.3";
 //		String[] numArray = num.split("\\.");
@@ -32,6 +32,10 @@ public class StringDefaultValueTest {
 		
 		String xxx = "";
 		System.out.println("xxx.length = " + xxx.length());
+		
+//		String userProfile_result  = "{'RequestId':'20160711-150521-5808','ResultCode':'00000','ResultText':'Success','PID':'P00000000000798','UID':'000000000267967','ContractId':'0004825506','CompanyId':'026','MSISDN':'0986022123','UserStatus':'1','CustProfileRes':{'RequestId':'20160711-150521-5808','ResultCode':'00000','ResultText':'Success','UID':'000000000267967','ContractId':'0004825506','MSISDN':'0986022123','CustId':'28431445','CustName':'士冰股份有限公司','AccountId':'0004859728','IMSI':'466890084011994','Birthday':'','OperatorId':'04','CompanyId':'026','BillingCycle':'12','Gender':'','CustType':'1','UserState':'0','VIPDegree':'New','VIPDate':'','vipStartDate':'','vipEndDate':'','PicUrl':'','Email':'','EmailFlag':'','Pwschange':'1','customerContribution':'Z','projectCode':'911008','projectName':'4G大玩特玩卡','retensionType':'','realFee':'0','activationDate':'2016/11/10 14:26:00','expiredDate':'2016/11/10 14:26:00','isMainMsisdn':'Y','nickname':'','planName':'T_STAR01','gsmToLteFlag':'1','gsmToLteDate':'2017/04/25 13:40:00','rtApplyDate':'','projectEffectiveDate':'2016/11/10 14:26:00','vipReward':'新星','isBL':'N'}}";
+		String userProfile_result  = "{\"RequestId\":\"20160711-150521-5808\",\"ResultCode\":\"00000\",\"ResultText\":\"Success\",\"PID\":\"P00000000000798\",\"UID\":\"000000000267967\",\"ContractId\":\"0004825506\",\"CompanyId\":\"026\",\"MSISDN\":\"0986022123\",\"UserStatus\":\"1\",\"CustProfileRes\":{\"RequestId\":\"20160711-150521-5808\",\"ResultCode\":\"00000\",\"ResultText\":\"Success\",\"UID\":\"000000000267967\",\"ContractId\":\"0004825506\",\"MSISDN\":\"0986022123\",\"CustId\":\"28431445\",\"CustName\":\"士冰股份有限公司\",\"AccountId\":\"0004859728\",\"IMSI\":\"466890084011994\",\"Birthday\":\"\",\"OperatorId\":\"04\",\"CompanyId\":\"026\",\"BillingCycle\":\"12\",\"Gender\":\"\",\"CustType\":\"1\",\"UserState\":\"0\",\"VIPDegree\":\"New\",\"VIPDate\":\"\",\"vipStartDate\":\"\",\"vipEndDate\":\"\",\"PicUrl\":\"\",\"Email\":\"\",\"EmailFlag\":\"\",\"Pwschange\":\"1\",\"customerContribution\":\"Z\",\"projectCode\":\"911008\",\"projectName\":\"4G大玩特玩卡\",\"retensionType\":\"\",\"realFee\":\"0\",\"activationDate\":\"2016/11/10 14:26:00\",\"expiredDate\":\"2016/11/10 14:26:00\",\"isMainMsisdn\":\"Y\",\"nickname\":\"\",\"planName\":\"T_STAR01\",\"gsmToLteFlag\":\"1\",\"gsmToLteDate\":\"2017/04/25 13:40:00\",\"rtApplyDate\":\"\",\"projectEffectiveDate\":\"2016/11/10 14:26:00\",\"vipReward\":\"新星\",\"isBL\":\"N\"}}";;
+		System.out.println(userProfile_result);
 	}
 
 }
