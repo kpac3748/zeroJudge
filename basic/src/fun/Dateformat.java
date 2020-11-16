@@ -1,8 +1,8 @@
 package fun;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -21,34 +21,34 @@ public class Dateformat {
 //		Date today = c.getTime();
 //		System.out.println(today);
 
-		String dateOri = "2020/09/15 00:00:00";
-		String dateEnd = "2020/09/15 11:00:00";
-		String ori = dateOri.replaceAll("/", "");
-		String end = dateEnd.replaceAll("/", "");
-
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
-		try {
-
-			Date a = sdf.parse(ori);
-			Date b = sdf.parse(end);
-			Date c = new Date();
-
-			System.out.println("a = " + a);
-			System.out.println("b = " + b);
-			System.out.println("c = " + c);
-
-			if (a.compareTo(c) > 0) {
-				System.out.println("a is after b");
-			} else if (a.compareTo(c) < 0) {
-				System.out.println("a is before b");
-			} else if (a.compareTo(c) == 0) {
-				System.out.println("a is equal to b");
-			}
-
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		String dateOri = "2020/09/15 00:00:00";
+//		String dateEnd = "2020/09/15 11:00:00";
+//		String ori = dateOri.replaceAll("/", "");
+//		String end = dateEnd.replaceAll("/", "");
+//
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+//		try {
+//
+//			Date a = sdf.parse(ori);
+//			Date b = sdf.parse(end);
+//			Date c = new Date();
+//
+//			System.out.println("a = " + a);
+//			System.out.println("b = " + b);
+//			System.out.println("c = " + c);
+//
+//			if (a.compareTo(c) > 0) {
+//				System.out.println("a is after b");
+//			} else if (a.compareTo(c) < 0) {
+//				System.out.println("a is before b");
+//			} else if (a.compareTo(c) == 0) {
+//				System.out.println("a is equal to b");
+//			}
+//
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 //		String tfdStartDate = "20191201";
 //		if(isValidDate(tfdStartDate)) {
@@ -85,6 +85,56 @@ public class Dateformat {
 
 //		java.sql.Date date_SQL = new java.sql.Date(System.currentTimeMillis());
 //		System.out.println(date_SQL);
+
+//		Date d = new Date();
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+//		String xxx = sdf.format(d);
+//		System.out.println(xxx);
+
+//		Calendar calendar = Calendar.getInstance();
+//		calendar.set(2020, 11, 05);
+//		System.out.println(calendar);
+//		calendar.add(Calendar.YEAR, 1);
+
+//		System.out.println(calendar.get(Calendar.YEAR));
+
+//		String orderReserveDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date());
+//		String orderReserveDate2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(calendar.getTime());
+//		System.out.println(orderReserveDate);
+//		System.out.println(orderReserveDate2);
+
+//		Timestamp ts = new Timestamp(System.currentTimeMillis());
+//		System.out.println("ts = " + ts);
+//		
+//		Date date = new Date(ts.getTime());
+//		System.out.println("date = " + date);
+//		date = ts;
+//		System.out.println("date = " + date);
+		Date today = new Date();
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		calendar.setTime(today);
+		calendar.add(calendar.DAY_OF_YEAR, 3);
+		Date afterDays = calendar.getTime();
+		String sdfAfterDays = sdf.format(afterDays);
+		System.out.println(sdfAfterDays);
+
+//		try {
+//			String time = "2020-09-15 16:00";
+//			sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+//			Date xxx = sdf.parse(time);
+//			System.out.println(xxx);
+//			calendar.setTime(xxx);
+//			calendar.add(calendar.DAY_OF_YEAR, 3);
+//			afterDays = calendar.getTime();
+//			sdfAfterDays = sdf.format(afterDays);
+//			System.out.println("22222222222 = " + sdfAfterDays);
+//
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
 	}
 
 	private static boolean isValidDate(String str) {
