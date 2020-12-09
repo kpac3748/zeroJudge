@@ -61,8 +61,12 @@ public class StringDefaultValueTest {
 //		System.out.println(yyy);
 		
 //		prepareTstarApplCartItem("手機拆封+開通手機,2000|登入Apple帳號,1000|包膜,500", "");
-		String xxx = "{\"code\":\"0099\",\"msg\":\"地址參數有誤\",\"data\":null}";
-		System.out.println(xxx.length());
+//		String xxx = "{\"code\":\"0099\",\"msg\":\"地址參數有誤\",\"data\":null}";
+//		System.out.println(xxx.length());
+		
+//		String logText = String.format(" (CNSManagerImpl.%s) ", "TS_update_available_time().");
+		String xxx = "0";
+		System.out.println(Integer.parseInt(xxx));
 	}
 	
 	static void prepareTstarApplCartItem(String selectedPrepayDiscountInfo, String applNo) {

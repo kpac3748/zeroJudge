@@ -110,14 +110,14 @@ public class Dateformat {
 //		System.out.println("date = " + date);
 //		date = ts;
 //		System.out.println("date = " + date);
-		Date today = new Date();
-		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-		calendar.setTime(today);
-		calendar.add(calendar.DAY_OF_YEAR, 3);
-		Date afterDays = calendar.getTime();
-		String sdfAfterDays = sdf.format(afterDays);
-		System.out.println(sdfAfterDays);
+//		Date today = new Date();
+//		Calendar calendar = Calendar.getInstance();
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+//		calendar.setTime(today);
+//		calendar.add(calendar.DAY_OF_YEAR, 3);
+//		Date afterDays = calendar.getTime();
+//		String sdfAfterDays = sdf.format(today);
+//		System.out.println(sdfAfterDays);
 
 //		try {
 //			String time = "2020-09-15 16:00";
@@ -134,7 +134,19 @@ public class Dateformat {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-
+		
+		
+		Date today = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(today);
+		calendar.add(calendar.YEAR, 3);
+		Date afterDays = calendar.getTime();
+		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
+		String xxx = sdf.format(afterDays);
+		
+		java.sql.Timestamp sqlDate = new java.sql.Timestamp(new java.util.Date().getTime());
+		
+		System.out.println(sqlDate);
 	}
 
 	private static boolean isValidDate(String str) {
