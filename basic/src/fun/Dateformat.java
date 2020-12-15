@@ -134,19 +134,47 @@ public class Dateformat {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		
-		
-		Date today = new Date();
+
+//		Date today = new Date();
+//		Calendar calendar = Calendar.getInstance();
+//		calendar.setTime(today);
+//		calendar.add(calendar.YEAR, 3);
+//		Date afterDays = calendar.getTime();
+//		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
+//		String xxx = sdf.format(afterDays);
+//		
+//		java.sql.Timestamp sqlDate = new java.sql.Timestamp(new java.util.Date().getTime());
+//		
+//		System.out.println(sqlDate);
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		String scheduledDate = "2020-12-11 15:00";
 		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(today);
-		calendar.add(calendar.YEAR, 3);
+		Date sdfScheduledDate;
+		
+		try {
+			sdfScheduledDate = sdf.parse(scheduledDate);
+			calendar.setTime(sdfScheduledDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		calendar.add(Calendar.DAY_OF_MONTH, 3);
 		Date afterDays = calendar.getTime();
-		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
-		String xxx = sdf.format(afterDays);
-		
-		java.sql.Timestamp sqlDate = new java.sql.Timestamp(new java.util.Date().getTime());
-		
-		System.out.println(sqlDate);
+		String sdfAfterDays = sdf.format(afterDays);
+		System.out.println("sdfAfterDays = " + sdfAfterDays);
+
+//	      // make 3 comparisons with them
+//	      int comparison = sdfTodayDate.compareTo(date);
+//	      int comparison2 = date.compareTo(sdfTodayDate);
+//	      int comparison3 = sdfTodayDate.compareTo(date);
+//
+//	      // print the results
+//	      System.out.println("Comparison Result:" + comparison);
+//	      System.out.println("Comparison2 Result:" + comparison2);
+//	      System.out.println("Comparison3 Result:" + comparison3);
+
 	}
 
 	private static boolean isValidDate(String str) {
