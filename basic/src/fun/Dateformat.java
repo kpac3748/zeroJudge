@@ -147,24 +147,67 @@ public class Dateformat {
 //		
 //		System.out.println(sqlDate);
 
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-		String scheduledDate = "2020-12-11 15:00";
-		Calendar calendar = Calendar.getInstance();
-		Date sdfScheduledDate;
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+//		String scheduledDate = "2020-12-11 01:55";
+//		Calendar calendar = Calendar.getInstance();
+//		Calendar calendarToday = Calendar.getInstance();
+//		Date sdfScheduledDate;
+//		
+//		try {
+//			sdfScheduledDate = sdf.parse(scheduledDate);
+//			calendar.setTime(sdfScheduledDate);
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		int year = calendarToday.get(Calendar.MONTH) +1;
+//		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+//		int min = calendar.get(Calendar.MINUTE);
+//		System.out.println("hour = " + hour);
+//		System.out.println("min = " + min);
+//		
+//		
+//		
+//		
+//		calendarToday.add(Calendar.DAY_OF_MONTH, 3);
+//		calendarToday.set(Calendar.HOUR_OF_DAY, hour);
+//		calendarToday.set(Calendar.MINUTE, min);
+//		
+//		Date afterDays = calendarToday.getTime();
+//		String sdfAfterDays = sdf.format(afterDays);
+//		System.out.println("sdfAfterDays = " + sdfAfterDays);
 		
-		try {
-			sdfScheduledDate = sdf.parse(scheduledDate);
-			calendar.setTime(sdfScheduledDate);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		calendar.add(Calendar.DAY_OF_MONTH, 3);
-		Date afterDays = calendar.getTime();
-		String sdfAfterDays = sdf.format(afterDays);
-		System.out.println("sdfAfterDays = " + sdfAfterDays);
-
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+//		String scheduledDate = "2020-12-11 15:00";
+//		Date sdfScheduledDate = null;
+//		try {
+//			sdfScheduledDate = sdf.parse(scheduledDate);
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		 /*取得今天的Calendar*/
+//        Calendar calendarToday = Calendar.getInstance();
+        
+        /*取得預約供裝時間的Calendar*/
+//        Calendar calendarScheduledDate = Calendar.getInstance();
+//        
+//        calendarScheduledDate.setTime(sdfScheduledDate);
+        /*取得預約供裝時間的時*/
+//        int scheduledDateHour = calendarScheduledDate.get(Calendar.HOUR_OF_DAY);
+        /*取得預約供裝時間的分*/
+//        int scheduledDateMin = calendarScheduledDate.get(Calendar.MINUTE);;
+        
+        /*設定將預約供裝時段，並將日期從今日延後3天。*/
+//        calendarToday.add(Calendar.DAY_OF_MONTH, 3);
+//        calendarToday.set(Calendar.HOUR_OF_DAY, scheduledDateHour);
+//        calendarToday.set(Calendar.MINUTE, scheduledDateMin);
+//        Date afterDays = calendarToday.getTime();
+//        String sdfAfterDays = sdf.format(afterDays);
+//        
+//        System.out.println(sdfAfterDays);
+//		
 //	      // make 3 comparisons with them
 //	      int comparison = sdfTodayDate.compareTo(date);
 //	      int comparison2 = date.compareTo(sdfTodayDate);
@@ -174,7 +217,12 @@ public class Dateformat {
 //	      System.out.println("Comparison Result:" + comparison);
 //	      System.out.println("Comparison2 Result:" + comparison2);
 //	      System.out.println("Comparison3 Result:" + comparison3);
-
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+		Calendar calendarToday = Calendar.getInstance();
+      Date afterDays = calendarToday.getTime();
+      String sdfAfterDays = sdf.format(afterDays);
+      System.out.println("sdfAfterDays Result:" + sdfAfterDays);
 	}
 
 	private static boolean isValidDate(String str) {

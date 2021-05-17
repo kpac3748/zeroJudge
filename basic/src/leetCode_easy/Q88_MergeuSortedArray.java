@@ -1,5 +1,10 @@
 package leetCode_easy;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 /*
  * Given two sorted integer arrays nums1 and nums2, 
  * merge nums2 into nums1 as one sorted array.
@@ -32,27 +37,41 @@ public class Q88_MergeuSortedArray {
 	
 	static int[] merge(int[] nums1, int m, int[] nums2, int n) {
 		
+		List<Integer> lstNum1 = new ArrayList<Integer>();
 		
-		
-        return null;
-    }
-	
-	static int recurtion(int num1Length, int[] midNum, int compareNum) {
-		int newIndex = 0;
-		
-		while(num1Length % 2 > 1) {
-			if(midNum[num1Length/2] > compareNum) {
-				recurtion(num1Length, midNum, compareNum);
-			}
-			else if(midNum[num1Length/2] < compareNum) {
-				
-			}
-			else {
-				return num1Length/2;
-			}
+		for(int i = 0; i < m; i++) {
+			lstNum1.add(nums1[i]);
 		}
 		
-		return 0;
+		for(int i = 0; i < n; i++) {
+			lstNum1.add(nums2[i]);
+		}
+		
+		IntComparator intComparator = new IntComparator();
+		
+		lstNum1.sort(intComparator);
+		
+		for(int i = 0; i < lstNum1.size(); i++) {
+			nums1[i] = lstNum1.get(i);
+		}
+		
+        return nums1;
+    }
+	
+	static class IntComparator implements Comparator<Integer> {
+
+		@Override
+		public int compare(Integer o1, Integer o2) {
+			
+			if(o1 < o2) {
+				return -1;
+			}
+			else if(o1 > o2) {
+				return 1;
+			}
+			
+			return 0;
+		}
 	}
 
 }

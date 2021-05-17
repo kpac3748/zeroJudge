@@ -65,26 +65,26 @@ public class ListDeepClone {
 		
 //		stringListClone.addAll(stringList);
 		
-//		stringListClone = stringList;
+		stringListClone = stringList;
 		
 //		for(int i = 0 ; i < stringList.size(); i++) {
 //        	stringListClone.add(stringList.get(i));
 //        }
         
-        for(int i = 0 ; i < stringList.size(); i++) {
-        	if(stringList.get(i) == stringListClone.get(i)) {
-        		System.out.println(stringList.get(i));
-        	}
-        }
+//        for(int i = 0 ; i < stringList.size(); i++) {
+//        	if(stringList.get(i) == stringListClone.get(i)) {
+//        		System.out.println(stringList.get(i));
+//        	}
+//        }
+//        
+//        if(stringList == stringListClone) {
+//    		System.out.println("true");
+//    	}
+//        else {
+//        	System.out.println("false");
+//        }
         
-        if(stringList == stringListClone) {
-    		System.out.println("true");
-    	}
-        else {
-        	System.out.println("false");
-        }
-        
-//		stringList.clear();
+		stringList = new ArrayList<>();
 //		stringListClone.clear();
 		
 //		stringList.remove(0);
